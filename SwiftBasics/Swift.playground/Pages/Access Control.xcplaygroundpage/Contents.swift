@@ -21,37 +21,11 @@ struct Assignment {
 }
 
 //: ### Private
-example(of: "Private") {
+example(of: "Access Control") {
     // Initialize
     // Access id
     // Access completed
     // Modify completed
-}
-
-//: ### Fileprivate and Internal
-example(of: "Fileprivate and Internal") {
-    // Initialze
-    // Set description
-    // Set internal
-    // Initialize open assignment
-    // Access id
-}
-
-//: ### Public
-example(of: "Public") {
-    // Instantiate OpenAssignment
-    // Use title
-}
-
-//: ### Open
-example(of: "Open") {
-    class SwiftAssignment: OpenAssignment {
-        // Override unique description
-
-        // Override desc
-    }
-    
-    // Instantiate
 }
 
 //: [Next](@next)

@@ -5,7 +5,6 @@ import Foundation
 example(of: "Strings") {
     // Inferred string
     // Explicit string
-    // Multiline string
 }
 //: ### Mutability
 example(of: "Mutability") {

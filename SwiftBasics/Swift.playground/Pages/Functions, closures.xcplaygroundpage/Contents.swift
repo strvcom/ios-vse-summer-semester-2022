@@ -30,14 +30,20 @@ example(of: "Function parameter with default value") {
     // Add to function with default value
 }
 
-//: ## Closures
-//: ### Function type
-example(of: "Function type") {
-    // Add function
-    // Assign reference to variable
-    // Type of
+//: ### Object method
+example(of: "Method in a structure") {
+    struct Person {
+        let firstName: String
+        let lastName: String
+        
+        // Implement full name method
+    }
+    
+    // Instantiate
+    // Call full name
 }
 
+//: ## Closures
 //: ### Closure declaration
 example(of: "Closure declaration") {
     // Add closure
@@ -46,8 +52,24 @@ example(of: "Closure declaration") {
 //: ### Closure as a function parameter
 example(of: "Closure as a function parameter") {
     // Combine with a closure
-    // Additon closure
+    // Addition closure
     // Subtraction closure
+}
+
+//: ## Extensions
+struct Person {
+    let name: String
+}
+
+extension Person {
+    // Property age
+    // Computed property name components
+    // Function name with degree
+}
+
+example(of: "Person extension") {
+    // Instantiate
+    // Use
 }
 
 //: [Next](@next)

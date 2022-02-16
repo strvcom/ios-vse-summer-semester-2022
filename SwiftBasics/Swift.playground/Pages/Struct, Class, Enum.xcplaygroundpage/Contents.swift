@@ -1,7 +1,7 @@
 //: [Previous](@previous)
 //: # Structures, classes, enumerations
 import Foundation
-//: ## Structures
+//: ## Structures and classes
 //: ### Declaration
 example(of: "Struct declaration") {
     struct Person {
@@ -12,7 +12,6 @@ example(of: "Struct declaration") {
     // Instantiate
 }
 
-//: ### Explicit initializer
 example(of: "Struct with explicit initializer") {
     struct Person {
         let firstName: String
@@ -22,6 +21,20 @@ example(of: "Struct with explicit initializer") {
     }
     
     // Initialize
+}
+
+example(of: "Class declaration") {
+    class Person {
+        let firstName: String
+        let lastName: String
+        
+        init(firstName: String, lastName: String) {
+            self.firstName = firstName
+            self.lastName = lastName
+        }
+    }
+    
+    // Instantiate
 }
 
 //: ### Mutating
@@ -46,48 +59,6 @@ example(of: "Mutating structure") {
     // Mutate with mutating function
 }
 
-//: ### Value type
-example(of: "Value type") {
-    struct Person {
-        var firstName: String
-        var lastName: String
-    }
-
-    // Instantiate
-    // Copy instance
-    // Modify name
-}
-
-//: ### Inheritance
-example(of: "Inheritance") {
-    struct Person {
-        var firstName: String
-        var lastName: String
-    }
-
-    struct UppercasedPerson {
-    }
-    
-    // Try to inherit
-}
-
-//: ## Classes
-//: ### Declaration
-example(of: "Class declaration") {
-    class Person {
-        let firstName: String
-        let lastName: String
-        
-        init(firstName: String, lastName: String) {
-            self.firstName = firstName
-            self.lastName = lastName
-        }
-    }
-    
-    // Instantiate
-}
-
-//: ### Mutating
 example(of: "Mutating class") {
     class Person1 {
         let firstName: String
@@ -119,7 +90,18 @@ example(of: "Mutating class") {
     // Mutate with mutating function
 }
 
-//: ### Reference type
+//: ### Value type vs. reference type
+example(of: "Value type") {
+    struct Person {
+        var firstName: String
+        var lastName: String
+    }
+
+    // Instantiate
+    // Copy instance
+    // Modify name
+}
+
 example(of: "Reference type") {
     class Person {
         var firstName: String
@@ -158,6 +140,18 @@ example(of: "Inheritance") {
     }
     
     // Instantiate
+}
+
+example(of: "Struct inheritance") {
+    struct Person {
+        var firstName: String
+        var lastName: String
+    }
+
+    struct UppercasedPerson {
+    }
+    
+    // Try to inherit
 }
 
 //: ## Enumerations

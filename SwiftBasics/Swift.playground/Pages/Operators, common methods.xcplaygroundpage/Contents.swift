@@ -35,6 +35,7 @@ example(of: "Comparison") {
     // LTE
     // GTE
 }
+
 //: ### Ternary conditional operator
 example(of: "Ternary conditional operator") {
     // Tuple
