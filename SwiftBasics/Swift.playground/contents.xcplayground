@@ -5,8 +5,8 @@
         <page name='Optionals'/>
         <page name='Collection Types'/>
         <page name='Struct, Class, Enum'/>
-        <page name='References'/>
         <page name='Functions, closures'/>
+        <page name='References'/>
         <page name='Access Control'/>
         <page name='Operators, common methods'/>
     </pages>

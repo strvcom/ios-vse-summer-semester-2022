@@ -180,13 +180,13 @@ example(of: "Struct inheritance") {
 //: ## Enumerations
 //: ### Declaration
 example(of: "Enum declaration") {
-    enum Languages {
+    enum Language {
         case swift
         case java
         case javascript
     }
     
-    let language: Languages = .swift
+    let language: Language = .swift
     print(language)
     
     switch language {
@@ -201,15 +201,50 @@ example(of: "Enum declaration") {
 
 //: ### Enum with raw value
 example(of: "Enum with raw value") {
-    // Enum with iOS languages with raw value
-    // Initialize with raw value
+    // The data type after the colon determines type of the "raw value"
+    enum Language: String {
+        case swift
+        case objc = "objective-c"
+    }
+    
+    // We can instantiate an enum value from the raw value
+    let swift = Language(rawValue: "swift")
+    print(swift!)
+
+    let objc = Language(rawValue: "objective-c")
+    print(objc!)
+
+    // This is an unspecified raw value so the result is `nil`
+    let unknown = Language(rawValue: "jdkfjsd")
+    print(unknown.debugDescription)
+
+    print(Language.swift.rawValue)
 }
 
 //: ### Enum with associated value
 example(of: "Enum with associated value") {
-    // Enum with languages
-    // Enum with platforms
-    // Assign to variable
+    enum Language {
+        case swift
+        case objc
+    }
+    
+    enum Platform {
+        case android
+        // Cases can have so called associated values
+        // Associated value can be of any type so you can have number, string or even array there
+        case ios(language: Language)
+    }
+    
+    let platform = Platform.ios(language: .swift)
+    
+    switch platform {
+    case .android:
+        print("Boooo")
+    // We can access the associated value like this
+    case .ios(let language):
+        print("The best platform")
+        print("We use \(language) to develop an iOS app")
+    }
 }
 
 //: [Next](@next)
