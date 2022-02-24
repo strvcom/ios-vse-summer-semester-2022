@@ -9,7 +9,8 @@ example(of: "Struct declaration") {
         let lastName: String
     }
     
-    // Instantiate
+    let me = Person(firstName: "Jan", lastName: "Schwarz")
+    print(me)
 }
 
 example(of: "Struct with explicit initializer") {
@@ -17,10 +18,14 @@ example(of: "Struct with explicit initializer") {
         let firstName: String
         let lastName: String
         
-        // Explicit initializer
+        init(lastName: String) {
+            self.firstName = "Jan"
+            self.lastName = lastName
+        }
     }
     
-    // Initialize
+    let me = Person(lastName: "Schwarz")
+    print(me)
 }
 
 example(of: "Class declaration") {
@@ -34,7 +39,8 @@ example(of: "Class declaration") {
         }
     }
     
-    // Instantiate
+    let me = Person(firstName: "Jan", lastName: "Schwarz")
+    print(me)
 }
 
 //: ### Value type vs. reference type
@@ -44,9 +50,13 @@ example(of: "Value type") {
         var lastName: String
     }
 
-    // Instantiate
-    // Copy instance
-    // Modify name
+    let me = Person(firstName: "Jan", lastName: "Schwarz")
+    var secondMe = me
+    
+    secondMe.firstName = "Honza"
+    
+    print("Me: ", me)
+    print("SecondMe: ", secondMe)
 }
 
 example(of: "Reference type") {
@@ -60,9 +70,13 @@ example(of: "Reference type") {
         }
     }
     
-    // Instantiate
-    // Copy instance
-    // Modify name
+    let me = Person(firstName: "Jan", lastName: "Schwarz")
+    let secondMe = me
+    
+    secondMe.firstName = "Honza"
+    
+    print("Me: ", me.firstName)
+    print("SecondMe: ", secondMe.firstName)
 }
 
 //: ### Mutating
@@ -72,19 +86,22 @@ example(of: "Mutating structure") {
         let lastName: String
     }
 
-    // Instantiate
-    // Try to mutate
+    var _ = Person1(firstName: "Jan", lastName: "Schwarz")
+    // me.firstName = "Honza"
     
     struct Person2 {
         var firstName: String
         var lastName: String
         
-        // Mutating function
+        mutating func updateFirstName() {
+            firstName = "Honza"
+        }
     }
     
-    // Instatntiate
-    // Mutate
-    // Mutate with mutating function
+    var me2 = Person2(firstName: "Jan", lastName: "Schwarz")
+    me2.firstName = "Honza"
+    me2.updateFirstName()
+    print(me2)
 }
 
 example(of: "Mutating class") {
@@ -98,9 +115,9 @@ example(of: "Mutating class") {
         }
     }
     
-    // Instantiate
-    // Try to mutate
-    
+    let _ = Person1(firstName: "Jan", lastName: "Schwarz")
+    // me.firstName = "Honza"
+
     class Person2 {
         var firstName: String
         var lastName: String
@@ -110,12 +127,14 @@ example(of: "Mutating class") {
             self.lastName = lastName
         }
 
-        // Update function
+        func updateFirstName() {
+            firstName = "Honza"
+        }
     }
     
-    // Instatntiate
-    // Mutate
-    // Mutate with mutating function
+    let me2 = Person2(firstName: "Jan", lastName: "Schwarz")
+    me2.firstName = "Honza"
+    me2.updateFirstName()
 }
 
 //: ### Inheritance
@@ -139,7 +158,11 @@ example(of: "Inheritance") {
         }
     }
     
-    // Instantiate
+    let me = Person()
+    let secondMe = UppercasedPerson()
+    
+    print(me.firstName)
+    print(secondMe.firstName)
 }
 
 example(of: "Struct inheritance") {
@@ -148,8 +171,8 @@ example(of: "Struct inheritance") {
         var lastName: String
     }
 
-    struct UppercasedPerson {
-    }
+//    struct UppercasedPerson: Person {
+//    }
     
     // Try to inherit
 }
@@ -157,8 +180,23 @@ example(of: "Struct inheritance") {
 //: ## Enumerations
 //: ### Declaration
 example(of: "Enum declaration") {
-    // Enum with iOS languages
-    // Assign to variable
+    enum Languages {
+        case swift
+        case java
+        case javascript
+    }
+    
+    let language: Languages = .swift
+    print(language)
+    
+    switch language {
+    case .swift:
+        print("Je tam swift")
+    case .java:
+        print("java")
+    case .javascript:
+        print("javascript")
+    }
 }
 
 //: ### Enum with raw value
