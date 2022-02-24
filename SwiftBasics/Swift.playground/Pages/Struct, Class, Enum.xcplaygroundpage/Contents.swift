@@ -37,6 +37,34 @@ example(of: "Class declaration") {
     // Instantiate
 }
 
+//: ### Value type vs. reference type
+example(of: "Value type") {
+    struct Person {
+        var firstName: String
+        var lastName: String
+    }
+
+    // Instantiate
+    // Copy instance
+    // Modify name
+}
+
+example(of: "Reference type") {
+    class Person {
+        var firstName: String
+        var lastName: String
+        
+        init(firstName: String, lastName: String) {
+            self.firstName = firstName
+            self.lastName = lastName
+        }
+    }
+    
+    // Instantiate
+    // Copy instance
+    // Modify name
+}
+
 //: ### Mutating
 example(of: "Mutating structure") {
     struct Person1 {
@@ -88,34 +116,6 @@ example(of: "Mutating class") {
     // Instatntiate
     // Mutate
     // Mutate with mutating function
-}
-
-//: ### Value type vs. reference type
-example(of: "Value type") {
-    struct Person {
-        var firstName: String
-        var lastName: String
-    }
-
-    // Instantiate
-    // Copy instance
-    // Modify name
-}
-
-example(of: "Reference type") {
-    class Person {
-        var firstName: String
-        var lastName: String
-        
-        init(firstName: String, lastName: String) {
-            self.firstName = firstName
-            self.lastName = lastName
-        }
-    }
-    
-    // Instantiate
-    // Copy instance
-    // Modify name
 }
 
 //: ### Inheritance
