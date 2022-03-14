@@ -11,8 +11,7 @@ struct ContentView: View {
     var body: some View {
         TabView {
             NavigationView {
-                Text("CHARACTERS")
-                    .font(.appItemLargeTitle)
+                CharacterListView()
             }
             .navigationViewStyle(StackNavigationViewStyle())
             .tabItem {
