@@ -21,6 +21,19 @@ struct ContentView: View {
             }
             
             NavigationView {
+                CharacterDetailView(
+                    character: Character.mock,
+                    episodes: Episode.mockList
+                )
+            }
+            .navigationViewStyle(StackNavigationViewStyle())
+            .tabItem {
+                Image(systemName: "film")
+                
+                Text("Detail")
+            }
+            
+            NavigationView {
                 Text("EPISODES")
                     .font(.appItemLargeTitle)
             }

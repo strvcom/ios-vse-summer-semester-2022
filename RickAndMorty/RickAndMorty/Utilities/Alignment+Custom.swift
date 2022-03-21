@@ -8,11 +8,11 @@
 import SwiftUI
 
 extension HorizontalAlignment {
-    struct HorizontalInfoAlignment: AlignmentID {
+    enum HorizontalInfoAlignment: AlignmentID {
         static func defaultValue(in context: ViewDimensions) -> CGFloat {
-            return context[.leading]
+            context[.leading]
         }
     }
     
-    static let horizontalInfoAlignment: HorizontalAlignment = HorizontalAlignment(HorizontalInfoAlignment.self)
+    static let horizontalInfoAlignment = HorizontalAlignment(HorizontalInfoAlignment.self)
 }
