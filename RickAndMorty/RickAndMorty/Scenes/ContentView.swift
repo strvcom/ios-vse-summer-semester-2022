@@ -21,19 +21,6 @@ struct ContentView: View {
             }
             
             NavigationView {
-                CharacterDetailView(
-                    character: Character.mock,
-                    episodes: Episode.mockList
-                )
-            }
-            .navigationViewStyle(StackNavigationViewStyle())
-            .tabItem {
-                Image(systemName: "person")
-                
-                Text("Detail")
-            }
-            
-            NavigationView {
                 EpisodesListView()
             }
             .navigationViewStyle(StackNavigationViewStyle())

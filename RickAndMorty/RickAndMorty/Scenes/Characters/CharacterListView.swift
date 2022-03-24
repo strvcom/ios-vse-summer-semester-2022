@@ -42,7 +42,14 @@ struct CharacterListView: View {
     @ViewBuilder var listContent: some View {
         LazyVStack {
             ForEach(characters) { character in
-                CharacterListRowItemView(character: character)
+                NavigationLink(
+                    destination: CharacterDetailView(
+                        character: character,
+                        episodes: Episode.mockList
+                    )
+                ) {
+                    CharacterListRowItemView(character: character)
+                }
             }
         }
         .padding(.horizontal, 16)
