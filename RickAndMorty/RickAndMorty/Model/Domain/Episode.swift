@@ -13,6 +13,22 @@ struct Episode {
     let code: String
     let airDate: Date
     let characterIds: [Int]
+    
+    var rottenTomatoesUrl: URL? {
+        let codeParts = code.dropFirst().split(separator: "E")
+        
+        guard
+            codeParts.count == 2,
+            let serieNumber = codeParts.first,
+            let episodeNumber = codeParts.last
+        else {
+            return nil
+        }
+        
+        let urlString = "https://www.rottentomatoes.com/tv/rick_and_morty/s\(serieNumber)/e\(episodeNumber)"
+        
+        return URL(string: urlString)
+    }
 }
 
 // MARK - Date Formatter

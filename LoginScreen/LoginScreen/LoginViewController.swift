@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import SwiftUI
 
 class LoginViewController: UIViewController {
     // MARK: - Constants
@@ -47,6 +48,10 @@ class LoginViewController: UIViewController {
 
         setupUI()
     }
+    
+    func dismissContent() {
+        dismiss(animated: true)
+    }
 }
 
 // MARK: - IBActions
@@ -54,6 +59,15 @@ private extension LoginViewController {
     @IBAction func didPressRevealButton(_: Any) {
         passwordTextField.isSecureTextEntry.toggle()
         revealPasswordButton.setState(passwordTextField.isSecureTextEntry ? .show : .hide)
+    }
+    
+    @IBAction func didTapOnDoneButton(_ sender: Any) {
+        let contentView = ContentView(parent: self)
+        let viewController = UIHostingController(rootView: contentView)
+        
+        viewController.modalPresentationStyle = .fullScreen
+        
+        present(viewController, animated: true)
     }
 }
 

@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		AD01B0E427F591E900553F44 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD01B0E327F591E900553F44 /* ContentView.swift */; };
 		CA63CC3D27F2E9FE006852CC /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA63CC3C27F2E9FE006852CC /* AppDelegate.swift */; };
 		CA63CC3F27F2E9FE006852CC /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA63CC3E27F2E9FE006852CC /* SceneDelegate.swift */; };
 		CA63CC4127F2E9FE006852CC /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA63CC4027F2E9FE006852CC /* LoginViewController.swift */; };
@@ -20,6 +21,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		AD01B0E327F591E900553F44 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		CA63CC3927F2E9FE006852CC /* LoginScreen.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LoginScreen.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CA63CC3C27F2E9FE006852CC /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		CA63CC3E27F2E9FE006852CC /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -73,6 +75,7 @@
 				CA63CC4227F2E9FE006852CC /* LoginViewController.storyboard */,
 				CA63CC4727F2E9FF006852CC /* LaunchScreen.storyboard */,
 				CA63CC4A27F2E9FF006852CC /* Info.plist */,
+				AD01B0E327F591E900553F44 /* ContentView.swift */,
 			);
 			path = LoginScreen;
 			sourceTree = "<group>";
@@ -184,6 +187,7 @@
 			files = (
 				CA7660DC27F2EDEA00D4B4E3 /* Color+App.swift in Sources */,
 				CA63CC4127F2E9FE006852CC /* LoginViewController.swift in Sources */,
+				AD01B0E427F591E900553F44 /* ContentView.swift in Sources */,
 				CA7660E227F2F91300D4B4E3 /* TextField.swift in Sources */,
 				CA63CC3D27F2E9FE006852CC /* AppDelegate.swift in Sources */,
 				CA7660E027F2F8C800D4B4E3 /* RevealButton.swift in Sources */,
