@@ -24,11 +24,24 @@ struct Character {
                 Int($0.lastPathComponent)
             }
     }
+
+    enum CodingKeys: String, CodingKey {
+        case id
+        case name
+        case species
+        case type
+        case gender
+        case origin
+        case location
+        case imageUrl = "image"
+        case episodeUrls = "episode"
+    }
 }
 
 // MARK: - Conformances
 extension Character: Identifiable {}
 extension Character: Equatable {}
+extension Character: Decodable {}
 
 // MARK: - Mock
 #if DEBUG

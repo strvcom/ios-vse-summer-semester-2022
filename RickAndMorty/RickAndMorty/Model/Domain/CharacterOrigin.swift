@@ -24,6 +24,7 @@ struct CharacterOrigin {
 
 // MARK: - Conformances
 extension CharacterOrigin: Equatable {}
+extension CharacterOrigin: Decodable {}
 
 // MARK: - Mock
 #if DEBUG

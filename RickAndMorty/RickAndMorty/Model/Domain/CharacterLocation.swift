@@ -24,6 +24,7 @@ struct CharacterLocation {
 
 // MARK: - Conformances
 extension CharacterLocation: Equatable {}
+extension CharacterLocation: Decodable {}
 
 // MARK: - Mock
 #if DEBUG

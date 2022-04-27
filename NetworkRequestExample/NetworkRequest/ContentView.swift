@@ -47,7 +47,7 @@ extension ContentView {
             URLQueryItem(name: "term", value: "Taylor+Swift"),
             URLQueryItem(name: "entity", value: "song")
         ]
-        
+
         guard let url = components.url else {
             assertionFailure("Malformed URL")
             
