@@ -9,5 +9,7 @@ import Foundation
 
 // Custom error handling
 enum APIError: Error, LocalizedError {
-    
+    case invalidURLComponents
+    case noResponse
+    case unacceptableResponseStatusCode
 }

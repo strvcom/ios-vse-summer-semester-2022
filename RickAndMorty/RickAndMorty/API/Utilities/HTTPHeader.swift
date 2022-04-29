@@ -7,12 +7,14 @@
 
 import Foundation
 
-//enum HTTPHeader {
-//    // key
-//    enum HeaderField: String {
-//    }
-//
-//    // value
-//    enum ContentType: String {
-//    }
-//}
+enum HTTPHeader {
+    // key
+    enum HeaderField: String {
+        case contentType = "Content-Type"
+    }
+
+    // value
+    enum ContentType: String {
+        case json = "application/json"
+    }
+}
