@@ -27,7 +27,7 @@ extension EpisodesListStore {
         do {
             // wait 2 seconds
             try await Task.sleep(nanoseconds: 2_000_000_000)
-            episodes = Episode.mockList
+            episodes = [Episode.mock]
             state = .finished
         } catch {
             state = .failed

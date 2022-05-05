@@ -25,10 +25,6 @@ extension CharacterRouter: Endpoint {
         }
     }
     
-    var method: HTTPMethod {
-        .get
-    }
-    
     var urlParamaters: [String : Any]? {
         switch self {
         case let .getCharacters(.some(page)):
@@ -40,7 +36,4 @@ extension CharacterRouter: Endpoint {
         }
     }
     
-    var headers: [String : String]? {
-        nil
-    }
 }

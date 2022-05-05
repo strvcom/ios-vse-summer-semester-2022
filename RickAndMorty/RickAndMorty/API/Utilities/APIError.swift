@@ -12,4 +12,5 @@ enum APIError: Error, LocalizedError {
     case invalidURLComponents
     case noResponse
     case unacceptableResponseStatusCode
+    case customDecodingFailed
 }

@@ -17,6 +17,15 @@ protocol Endpoint {
 }
 
 extension Endpoint {
+    
+    var method: HTTPMethod {
+        .get
+    }
+    
+    var headers: [String : String]? {
+        nil
+    }
+    
     func asRequest() throws -> URLRequest {
         let baseUrl = URL(string: "https://rickandmortyapi.com/api/")!
         let urlPath = baseUrl.appendingPathComponent(path)

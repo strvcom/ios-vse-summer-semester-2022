@@ -14,6 +14,7 @@ protocol APIManaging {
 
 // MARK: - Implementation
 final class APIManager: APIManaging {
+    
     private lazy var urlSession: URLSession = {
         let config = URLSessionConfiguration.default
         config.timeoutIntervalForRequest = 30
@@ -22,8 +23,18 @@ final class APIManager: APIManaging {
         return URLSession(configuration: config)
     }()
 
+    private lazy var dateFormatter: DateFormatter = {
+        let formatter = DateFormatter()
+        formatter.dateFormat = "yyyy-MM-dd"
+
+        return formatter
+    }()
+
     private lazy var decoder: JSONDecoder = {
         let decoder = JSONDecoder()
+
+        decoder.keyDecodingStrategy = .convertFromSnakeCase
+        decoder.dateDecodingStrategy = .formatted(dateFormatter)
 
         return decoder
     }()

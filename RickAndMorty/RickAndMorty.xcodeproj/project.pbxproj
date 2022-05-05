@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		236EE4232823BE4600C5E3D4 /* EpisodesRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 236EE4222823BE4600C5E3D4 /* EpisodesRouter.swift */; };
 		2F34AADE27D9ED2D003C2C4C /* CharacterListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F34AADD27D9ED2D003C2C4C /* CharacterListView.swift */; };
 		2F34AAE027D9F1FD003C2C4C /* CharacterListRowItemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F34AADF27D9F1FD003C2C4C /* CharacterListRowItemView.swift */; };
 		2F34AAE327D9F3A3003C2C4C /* SDWebImageSwiftUI in Frameworks */ = {isa = PBXBuildFile; productRef = 2F34AAE227D9F3A3003C2C4C /* SDWebImageSwiftUI */; };
@@ -50,6 +51,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		236EE4222823BE4600C5E3D4 /* EpisodesRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EpisodesRouter.swift; sourceTree = "<group>"; };
 		2F34AADD27D9ED2D003C2C4C /* CharacterListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharacterListView.swift; sourceTree = "<group>"; };
 		2F34AADF27D9F1FD003C2C4C /* CharacterListRowItemView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharacterListRowItemView.swift; sourceTree = "<group>"; };
 		2F49D9E827EB96DC0011E709 /* CharacterDetailView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CharacterDetailView.swift; sourceTree = "<group>"; };
@@ -304,6 +306,7 @@
 			isa = PBXGroup;
 			children = (
 				EC3737D5281A7C7500FE0906 /* CharacterRouter.swift */,
+				236EE4222823BE4600C5E3D4 /* EpisodesRouter.swift */,
 			);
 			path = Routers;
 			sourceTree = "<group>";
@@ -414,6 +417,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				236EE4232823BE4600C5E3D4 /* EpisodesRouter.swift in Sources */,
 				2FF610E327A5F2CD000D4A8B /* BackgroundGradientView.swift in Sources */,
 				2FF610F927A61468000D4A8B /* UINavigationController+BackButton.swift in Sources */,
 				2FF6108927A5A74E000D4A8B /* ContentView.swift in Sources */,

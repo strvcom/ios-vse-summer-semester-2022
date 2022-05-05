@@ -57,6 +57,9 @@ struct CharacterListView: View {
                 ) {
                     CharacterListRowItemView(character: character)
                 }
+                .task {
+                    await loadMoreIfNeed(for: character)
+                }
             }
         }
         .padding(.horizontal, 16)
@@ -73,6 +76,10 @@ extension CharacterListView {
         Task {
             await store.load()
         }
+    }
+    
+    func loadMoreIfNeed(for character: Character) async {
+        await store.loadMoreIfNeed(for: character)
     }
 
     func toggleMode() {
